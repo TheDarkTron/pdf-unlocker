@@ -22,13 +22,13 @@ def main():
     args = parseArguments()
 
     for file in args.files:
-        print(f'unlocking {file.name}... ', end='')
+        print(f'unlocking {file.name}...', end='')
         try:
             file.close()
             unlockPdf(file.name, args.password)
-            print('DONE')
+            print('\033[92m DONE\033[00m')
         except:
-            print('FAILED')
+            print('\033[91m FAILED\033[00m')
 
 
 if __name__ == '__main__':
