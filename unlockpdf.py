@@ -11,7 +11,7 @@ def unlockPdf(filename, password):
 
 
 def parseArguments():
-    parser = argparse.ArgumentParser(description='Unlocks pdfs')
+    parser = argparse.ArgumentParser(description='Python script to unlock password protected pdf files')
     parser.add_argument('files', nargs='+', type=argparse.FileType('rb'), help='the pdf files to unlock')
     parser.add_argument('password', help='the password')
 
